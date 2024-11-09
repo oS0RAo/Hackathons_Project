@@ -1,42 +1,158 @@
+<!-- <!DOCTYPE html>
 <html lang="en">
-          <head>
-            <meta charset="utf-8">
-          
-            <title>Donate Menu</title>
-            <meta name="description" content="Figma htmlGenerator">
-            <meta name="author" content="htmlGenerator">
-            <link href="https://fonts.googleapis.com/css?family=Moul&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Metrophobic&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Mitr&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Moul&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #E5E5E5;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .card {
+            background: white;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-family: 'Moul', sans-serif;
+            color: #1E1E1E;
+            margin: 0 0 10px 0;
+        }
+        .project-info {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .payment-methods, .payment-type, .amount-section {
+            margin-bottom: 30px;
+        }
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .button {
+            padding: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.2s;
+        }
+        .button.active {
+            background: #0066cc;
+            color: white;
+            border-color: #0066cc;
+        }
+        .amount-input, .donate-button {
+            width: 100%;
+            padding: 20px;
+            font-size: 18px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        .donate-button {
+            background: #0066cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .donate-button:hover {
+            background: #0052a3;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <h1>GLOWFUND</h1>
+            <p>ขอบคุณที่สมทบทุนให้กับเรา!!!</p>
+        </div>
+        <div class="project-info">
+            <h2>Doggy Pillow</h2>
+        </div>
+        <div class="payment-methods">
+            <h2>Payment method</h2>
+            <div class="button-grid">
+                <button class="button" onclick="selectPaymentMethod(this)">Credit / Debit</button>
+                <button class="button" onclick="selectPaymentMethod(this)">PayPal</button>
+                <button class="button" onclick="selectPaymentMethod(this)">Cryptocurrency</button>
+            </div>
+        </div>
+        <div class="payment-type">
+            <button class="button active" onclick="selectPaymentType(this, 'onetime')">One time</button>
+            <button class="button" onclick="selectPaymentType(this, 'monthly')">Monthly</button>
+        </div>
+        <div class="amount-section">
+            <div class="amount-header">
+                <span>Amount</span>
+                <span>Baht</span>
+            </div>
+            <input type="text" class="amount-input" id="amountInput" placeholder="Enter amount" oninput="validateAmount(this)">
+            <div class="button-grid">
+                <button class="button" onclick="setAmount(25)">25</button>
+                <button class="button" onclick="setAmount(50)">50</button>
+                <button class="button" onclick="setAmount(75)">75</button>
+                <button class="button" onclick="setAmount(100)">100</button>
+                <button class="button" onclick="setAmount(500)">500</button>
+                <button class="button" onclick="setAmount(1000)">1000</button>
+            </div>
+        </div>
+        <button class="donate-button" onclick="donateAndRedirect()">คลิกเพื่อบริจาค</button>
+    </div>
 
-            <link rel="stylesheet" href="styles.css">
-            
-            <style>
-              /*
-                Figma Background for illustrative/preview purposes only.
-                You can remove this style tag with no consequence
-              */
-              body {background: #E5E5E5; }
-            </style>
-          
-          </head>
-          
-          <body>
-            <div class=e301_187><span  class="e301_188">GLOWFUND</span>
-              <div class=e301_189><div  class="e301_190"></div>
-              <div  class="e301_191"></div></div>
-              <div  class="e301_192"></div>
-              <span  class="e457_30">602,120</span>
-              <div  class="e301_193"></div><div  class="e301_196"></div><div  class="e301_197"></div>
-              <div  class="e301_198"></div>
-              <span  class="e301_199">จำนวนเงินที่ ต้องการ 800,000 บาท</span><span  class="e301_201">สมาชิกที่เข้าร่วมบริจาค</span>
-              <span  class="e301_204">601</span><div  class="e301_205"></div>
-              <a href="../payment/index.html" class="e301_206">คลิกเพื่อบริจาค</a>
-
-              <div  class="e301_207"></div><span  class="e301_208">Doggy Pillow</span>
-              <span  class="e301_209">SEARCH</span>
-              <span  class="e301_211">เราสามารถ นำเเมวไปไหนก็ได้บนโลกนี้ ไอเดียนี้คิดมาโดย เเมวมากมั่งมี</span><div  class="e301_213"></div>
-              <div  class="e301_216"></div><div  class="e301_217"></div><div  class="e301_218"></div><span  class="e301_219">REWARD</span><span  class="e301_220">CAMPAIGN</span><div  class="e301_221"></div><div  class="e301_222"></div><div class=e301_223><div class=e301_224><div  class="e301_226"></div></div></div><div class=e301_227><div class=e301_228><div  class="e301_230"></div></div></div><span  class="e301_233">UPDATE</span><span  class="e301_234">FAQ</span><div  class="e301_243"></div><div  class="e301_244"></div><div  class="e301_245"></div><div  class="e301_246"></div><div  class="e301_247"></div><div  class="e301_248"></div><div  class="e301_249"></div><div  class="e301_406"></div><div  class="e301_407"></div><div  class="e301_734"></div><div  class="e301_831"></div><span  class="e301_832">DETAIL</span><div  class="e301_833"></div><div  class="e301_859"></div><span  class="e301_860">WISARUT YAMPRAYOON</span><span  class="e301_203">200 วัน</span><span  class="e301_202">ผ่านมาเเล้ว</span><div  class="e301_572"></div><div  class="e301_573"></div><div  class="e301_574"></div><span  class="e301_200">จำนวนเงินที่ได้รับ </span></div>
-          </body>
-          </html>
+    <script>
+      function setAmount(amount) {
+          document.getElementById('amountInput').value = amount;
+      }
+  
+      function validateAmount(input) {
+          let value = input.value.replace(/\D/g, '');
+          input.value = value;
+      }
+  
+      function donateAndRedirect() {
+          let currentAmount = parseInt(localStorage.getItem('currentAmount') || '602120');
+          let totalDonors = parseInt(localStorage.getItem('totalDonors') || '601');
+  
+          const donationAmount = parseInt(document.getElementById('amountInput').value) || 0;
+          if (donationAmount > 0) {
+              currentAmount += donationAmount;
+              totalDonors += 1;
+  
+              localStorage.setItem('currentAmount', currentAmount);
+              localStorage.setItem('totalDonors', totalDonors);
+  
+              // Store the specific donation amount
+              localStorage.setItem('lastDonationAmount', donationAmount);
+              console.log("lastDonationAmount saved:", donationAmount);  // Debugging log
+              
+              window.location.href = '../Bill/index.html';
+          } else {
+              alert("กรุณาระบุจำนวนเงินบริจาคที่ถูกต้อง");
+          }
+      }
+  </script>
+  
+</body>
+</html> -->
