@@ -1,4 +1,4 @@
-.1_2 { 
+.e1_2 { 
 	overflow:hidden;
 }
 .e1_2 { 
@@ -36,7 +36,7 @@
 	background-size:cover;
 }
 .e24_7 { 
-	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	
 	color:rgba(255, 255, 255, 1);
 	width:279px;
 	height:72px;
@@ -56,7 +56,7 @@
 	top:48px;
 }
 .e24_8 { 
-	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	
 	background-color:rgba(255, 255, 255, 1);
 	width:750px;
 	height:60px;
@@ -68,7 +68,7 @@
 	border-bottom-left-radius:10px;
 	border-bottom-right-radius:10px;
 }
-.24_8 { 
+.e24_8 { 
 	border:1px solid rgba(17.00000088661909, 17.00000088661909, 17.00000088661909, 1);
 }
 .e24_16 { 
@@ -82,7 +82,7 @@
 	background-size:cover;
 }
 .e48_26 { 
-	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	/* box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25); */
 	width:1644px;
 	height:270px;
 	position:absolute;
@@ -130,19 +130,20 @@
 .e48_19 { 
 	color:rgba(49.33987744152546, 49.33987744152546, 49.33987744152546, 1);
 	width:144px;
-	height:44px;
-	position:absolute;
-	left:827px;
-	top:891px;
+	height:40px;
+	position:relative;
+	left:825px;
+	top:890px;
 	font-family:Inter;
-	text-align:left;
+	text-align:center;
 	font-size:36px;
 	letter-spacing:0;
 }
 .e48_30 { 
+	box-shadow:0px 0px 4px rgba(0, 0, 0, 0.25);
 	color:rgba(255, 255, 255, 1);
-	width:600px;
-	height:100px;
+	width:780px;
+	height:567px;
 	position:absolute;
 	left:1044px;
 	top:1468px;
@@ -153,22 +154,20 @@
 }
 .e48_58 { 
 	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
-	width:767px;
-	height:755px;
+	width:780px;
+	height:500px;
 	position:absolute;
 	left:1044px;
 	top:1541px;
 }
-/*Glow Fund Detail*/
 .e48_39 { 
 	color:rgba(255, 255, 255, 1);
-	width:767px;
+	width:765px;
 	height:755px;
 	position:absolute;
 	left:0px;
 	top:0px;
 	text-align:left;
-	font-family:Mitr;
 	font-size:36px;
 	letter-spacing:0;
 }
@@ -233,8 +232,8 @@
 	width:127px;
 	height:115px;
 	position:absolute;
-	left:14px;
-	top:20px;
+	left:10px;
+	top:10px;
 	background-image:url(images/image_94.png);
 	background-repeat:no-repeat;
 	background-size:cover;
@@ -243,6 +242,7 @@
 	opacity:0.800000011920929;
 	width:656px;
 	height:670px;
+	
 	position:absolute;
 	left:204px;
 	top:1525px;
@@ -253,7 +253,9 @@
 	background-image:url(images/image_96.png);
 	background-repeat:no-repeat;
 	background-size:cover;
-}
+	background-position: center;
+
+} 
 .e314_81 { 
 	width:55px;
 	height:55px;
